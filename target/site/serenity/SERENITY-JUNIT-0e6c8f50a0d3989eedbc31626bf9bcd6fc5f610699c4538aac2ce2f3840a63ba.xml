@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Contratacion empleado" skipped="0" tests="1" time="0.37" timestamp="2025-09-16 06:58:25"><testcase name="Verify the new employee's data and status"><error type="java.lang.NullPointerException"/><system-err>null
+org.apache.commons.lang3.SystemUtils.isJavaVersionAtLeast(SystemUtils.java:1654)
+org.apache.commons.lang3.ClassUtils.isAssignable(ClassUtils.java:760)
+tasks.Login.performAs(Login.java:19)
+stepdefinitions.EmployeeHiringStepDefinitions.theUserLoginWithTheUsernameAndThePassword(ContratacionEmpleadoStepDefinitions.java:21)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+cucumber.runner.Runner.runPickle(Runner.java:80)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+</system-err></testcase></testsuite>
