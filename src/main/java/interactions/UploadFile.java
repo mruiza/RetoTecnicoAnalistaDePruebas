@@ -2,25 +2,24 @@ package interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
-import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.screenplay.actions.Enter;
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static userinterface.AddCandidatePage.*;
 
 public class UploadFile implements Interaction {
     private final String filePath;
-    private final Target target;
 
-    public UploadFile(String filePath, Target target) {
+    public UploadFile(String filePath) {
         this.filePath = filePath;
-        this.target = target;
     }
-
-    public static UploadFile to(Target target, String filePath) {
-        return Tasks.instrumented(UploadFile.class, filePath, target);
+    public static UploadFile fromPath(String filePath) {
+        return instrumented(UploadFile.class, filePath);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        target.resolveFor(actor).sendKeys(filePath);
-
+        actor.attemptsTo(
+                Enter.theValue(filePath).into(RESUME_INPUT)
+        );
     }
 }

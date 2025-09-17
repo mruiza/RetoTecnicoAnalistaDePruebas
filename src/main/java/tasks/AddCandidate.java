@@ -1,5 +1,6 @@
 package tasks;
 
+import interactions.UploadFile;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -32,6 +33,7 @@ public class AddCandidate implements Task {
                 Enter.theValue(personalData.get(0).getLastName()).into(LAST_NAME_INPUT),
                 Click.on(VACANCY_SELECT),
                 SelectFromOptions.byVisibleText(personalData.get(0).getVacancy()).from(VACANCY_SELECT),
+                UploadFile.fromPath(personalData.get(0).getResume()),
                 Enter.theValue(personalData.get(0).getEmailresume()).into(EMAIL_INPUT),
                 Click.on(SUBMIT_BUTTON),
                 Click.on(SHORLIST_BUTTON),
